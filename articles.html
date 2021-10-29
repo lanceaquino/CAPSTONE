@@ -59,39 +59,40 @@
         </div>
 
         <!-- Article contents-->
+        <!-- TO DO: Once articles are developed. Remove modal toggle -->
         <hr>
         <div id = 'article-contents'>
           <div class = 'row'>
             <div class = 'col-lg-4 col-md-6'>
               <img id = 'article-image' src = 'images/articles-page/books.jpg'>
               <h3>The importance of financial literacy.</h3>
-              <p><a href = '#' style = 'text-decoration: None'>Read more...</a></p>
+              <p><a href = '#' style = 'text-decoration: None' data-bs-toggle="modal" data-bs-target="#contact-page-modal">Read more...</a></p>
             </div>
             <div class = 'col-lg-4 col-md-6'>
               <img id = 'article-image' src = 'images/articles-page/piggy-bank.jpg'>
               <h3>Personal financing 2021: What you need to know.</h3>
-              <p><a href = '#' style = 'text-decoration: None'>Read more...</a></p>
+              <p><a href = '#' style = 'text-decoration: None' data-bs-toggle="modal" data-bs-target="#contact-page-modal">Read more...</a></p>
             </div>
             <div class = 'col-lg-4 col-md-6'>
               <img id = 'article-image' src = 'images/articles-page/wireless-pay.jpg'>
               <h3>Top current trends in financial tech.</h3>
-              <p><a href = '#' style = 'text-decoration: None'>Read more...</a></p>
+              <p><a href = '#' style = 'text-decoration: None' data-bs-toggle="modal" data-bs-target="#contact-page-modal">Read more...</a></p>
             </div>
 
             <div class = 'col-lg-4 col-md-6'>
               <img id = 'article-image' src = 'images/articles-page/wallet.jpg'>
                 <h3>What is the best digital wallet for you?</h3>
-                <p><a href = '#' style = 'text-decoration: None'>Read more...</a></p>
+                <p><a href = '#' style = 'text-decoration: None' data-bs-toggle="modal" data-bs-target="#contact-page-modal">Read more...</a></p>
               </div>
               <div class = 'col-lg-4 col-md-6'>
                 <img id = 'article-image' src = 'images/articles-page/iphone-calc.jpg'>
                 <h3>New to personal finance? Here are 10 things you must keep in mind.</h3>
-                <p><a href = '#' style = 'text-decoration: None'>Read more...</a></p>
+                <p><a href = '#' style = 'text-decoration: None' data-bs-toggle="modal" data-bs-target="#contact-page-modal">Read more...</a></p>
               </div>
               <div class = 'col-lg-4 col-md-6'>
                 <img id = 'article-image' src = 'images/articles-page/stonks.jpg'>
                 <h3>Interested in investing either in stocks or crypto?</h3>
-                <p><a href = '#' style = 'text-decoration: None'>Read more...</a></p>
+                <p><a href = '#' style = 'text-decoration: None' data-bs-toggle="modal" data-bs-target="#contact-page-modal">Read more...</a></p>
               </div>
             </div>
         </div>
@@ -101,6 +102,26 @@
 
 
     </section>
+
+<!-- MODAL (POP-UP)-->
+<!-- THIS IS TEMPORARY!!! Please remove once articles are finished. -->
+  <!-- Modal -->
+  <div class="modal fade" id="contact-page-modal" tabindex="-1" aria-labelledby="contact-page-modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contact-page-modal">Article is not yet available.</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Development of the articles are still in progress. Sorry for the inconvenience. 
+        </div>
+        <div class="modal-footer">
+          <button id = 'submit-button' type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
 
