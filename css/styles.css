@@ -1,0 +1,132 @@
+/* --------------- GLOBAL ---------------*/
+
+#main-container {
+    padding: 100px 0px 50px 0px; 
+}
+
+/* --------------- NAV BAR ---------------*/
+#main-navbar {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+/* --------------- HOME PAGE ---------------*/
+/* TOP SECTION TITLE */
+#title {
+    padding: 0px 50px 0px 50px;
+}
+
+#home-main-container {
+    padding: 100px 0px 150px 0px; 
+}
+
+.navbar-logo {
+    width: 30px;
+    height: 30px; 
+    margin-right: 10px;
+}
+
+.wallet-image {
+    display: block;
+    margin: 50px auto auto auto;
+    width: 45%;
+}
+
+.home-h1-main-text {
+    margin-top: 25%;
+    margin-right:20px;
+    text-align: right;
+    font-size: 45px;
+}
+
+.home-h3-sub-text {
+    margin-top: 20px;
+    margin-right:50px;
+    font-size: 1rem;
+    text-align: right;
+}
+
+
+
+/* FEATURES */
+#features{
+    background-color: #c7e4f9; 
+
+    padding-top: 50px; 
+    padding-bottom: 50px;
+}
+
+#home-features{
+    text-align: center;
+}
+
+#home-features-compare-picture {
+    width : 25%;
+    margin-bottom: 35px;
+}
+
+#home-features-articles-picture {
+    width: 25%;
+    margin-bottom: 35px; 
+}
+
+#home-features-soon-picture {
+    width: 25%;
+    margin-bottom: 35px; 
+}
+
+
+/* FOOTER */
+
+#footer {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+/* --------------- ARTICLES PAGE ---------------*/
+#articles-container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+#articles-header {
+    padding-bottom: 50px;
+}
+
+#articles-page-picture {
+    display: block;
+    margin: 0px auto auto auto;
+    width: 75%;
+}
+
+#article-contents {
+    padding-top: 20px;
+}
+
+#article-image {
+    width: 100%;
+    margin: auto auto auto auto;
+    padding-bottom: 30px;
+}
+
+/* --------------- CONTACT US PAGE ---------------*/
+
+/* #contact-us-title{
+} */
+
+#contact-template{
+    margin-top: 150px;
+}
+
+#contact-page-type-pic{
+    display: block;
+    width : 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#submit-button{
+    margin-top: 15px;
+    background-color: #226699;
+}
