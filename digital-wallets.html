@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
     <title>Pitaka: Learn more about Digital Wallets</title>
+  
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="images/favicon/favicon.ico" href="images/favicon/favicon.ico"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- According Juraj, this is very bad practice and please move script at the bottom. He whispers it significantly reduces performance. -->
     
-    </head>
+  </head>
     
     <body>
     
@@ -61,6 +64,59 @@
 
     </section>
 
+<!-- DIGITAL WALLET COMPARISON -->
+<!-- Make a layout  -->
+
+    <section class = 'container'>
+  
+      <table class="table" id = 'wallet-table'>
+        <thead>
+          <tr>
+            <th scope="col">
+              <h3>Features</h3>
+            </th>
+            <th id = 'tab-wallet1' scope="col">
+              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected>Choose wallet</option>
+                <option value="1">Wallet 1</option>
+                <option value="2">Wallet 2</option>
+                <option value="3">Wallet 3</option>
+              </select>
+            </th>
+            <th id = 'tab-wallet2' scope="col">
+              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected>Choose wallet</option>
+                <option value="1">Wallet 1</option>
+                <option value="2">Wallet 2</option>
+                <option value="3">Wallet 3</option>
+              </select>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id ='comparison-desc'>Brief Description</td>
+            <!-- Add ID/class for dictionary calls -->
+            <td id = 'wallet1-desc'>row 1 col 1</td>
+            <td id = 'wallet2-desc'>row 1 col 2</td>
+          </tr>
+          <tr>
+            <td id = 'comparison-main-uses'>Main Uses</td>
+            <td id = 'wallet1-comparison-uses'>row 2 col 1</td>
+            <td id = 'wallet2-comparison-uses'>row 2 col 2</td>
+          </tr>
+          <tr>
+            <td id = 'comparison-device-support'> Device Support </td>
+            <td id = 'wallet1-comparison-device'>row 3 col 1</td>
+            <td id = 'wallet2-comparison-device'>row 3 col 2</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+
+
+
 <!-- Footer -->
 
   <hr>
@@ -70,5 +126,97 @@
 
   </footer>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" language="javascript" src="wallet_data.json"></script> 
+
+
+  <script>
+    
+    // IMPORTANT NOTE: This data is temporary. We need to find way t
+    // to host JSON file and still in development. But for now, this 
+    // Would be the filler for the digital wallets data. 
+    // mydata = {
+    //   "Choose Wallet":{
+    //     "desc": "...",
+    //     "feat1" : "...", 
+    //     "feat2" : "..."
+    //   },
+      
+    //   "Wallet 1": {
+    //     "desc" : "test", 
+    //     "feat1" : "feature2", 
+    //     "feat2" : "feature"
+    //   },
+
+    //   "Wallet 2": {
+    //     "desc" : "feature", 
+    //     "feat1" : "feautre", 
+    //     "feat2" : "feature"
+    //   },
+
+    //   "Wallet 3": {
+    //     "desc" : "feature", 
+    //     "feat1" : "feautre", 
+    //     "feat2" : "feature"
+    //   }
+    // }; 
+
+    // $("select").on("change", function(event){
+    //   $.getJSON('wallet_data.json', function(wallet) {
+    //     console.log(wallet)
+    //   })
+    // })
+
+    // Initiate wallet variables
+    var wallet_1 = "Choose_Wallet";
+    var wallet_2 = "Choose Wallet";
+
+    // Select Wallets from 'Select'
+    $('select').on('change', function() {
+      var chosen_wallet = $('#tab-wallet1 option:selected').text()
+      console.log(chosen_wallet)
+      wallet_1 = chosen_wallet
+    });
+
+    $('select').on('change', function() {
+      var chosen_wallet = $('#tab-wallet2 option:selected').text()
+      console.log(chosen_wallet)
+      wallet_2 = chosen_wallet
+    });
+
+    console.log(wallet_1);
+    console.log(wallet_2);
+
+    // Call JSON using wallet vals 
+    $(document).ready(function(e) {
+         console.log(jsonObject.wallet_1);
+    });
+
+
+
+    // $(document).ready(function(){
+    //     $.getJSON("wallet_data.json", function(data){
+    //         // console.log(data.name); // Prints: Harry
+    //         // console.log(data.age); // Prints: 14
+    //     }).fail(function(){
+    //         console.log("An error has occurred.");
+    //     });
+    // });
+
+
+
+    // $('#wallet-table').on('change', function() {
+    //   $.getJSON("wallet_data.json", function(result){
+    //     $.each(result, function(i, field){
+    //       $("#wallet1-desc").text("test")
+    //     })
+    //   })
+    //   // alert( this.value );
+    // });
+  </script>
+
 </body>
+
+
 </html>
+

@@ -1,5 +1,13 @@
 /* --------------- GLOBAL ---------------*/
 
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h3 {
+    font-weight: 900;
+}
+
 #main-container {
     padding: 100px 0px 50px 0px; 
 }
@@ -37,40 +45,43 @@
     margin-right:20px;
     text-align: right;
     font-size: 45px;
+    font-weight: 900; 
 }
 
 .home-h3-sub-text {
     margin-top: 20px;
-    margin-right:50px;
+    margin-right:20px;
     font-size: 1rem;
     text-align: right;
 }
 
 
-
 /* FEATURES */
 #features{
     background-color: #c7e4f9; 
-
     padding-top: 50px; 
     padding-bottom: 50px;
 }
 
 #home-features{
     text-align: center;
+    font-weight: bold;
 }
 
 #home-features-compare-picture {
+    margin-top: 35px;
     width : 25%;
     margin-bottom: 35px;
 }
 
 #home-features-articles-picture {
+    margin-top: 35px;
     width: 25%;
     margin-bottom: 35px; 
 }
 
 #home-features-soon-picture {
+    margin-top: 35px;
     width: 25%;
     margin-bottom: 35px; 
 }
@@ -108,6 +119,12 @@
     width: 100%;
     margin: auto auto auto auto;
     padding-bottom: 30px;
+}
+
+/* --------------- DIGITAL WALLETS PAGE ---------------*/
+
+#wallet-table {
+    text-align: center;
 }
 
 /* --------------- CONTACT US PAGE ---------------*/

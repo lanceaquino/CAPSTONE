@@ -1,0 +1,25 @@
+[{
+    "Choose Wallet":{
+        "desc": "...",
+        "feat1" : "...", 
+        "feat2" : "..."
+    },
+
+    "Wallet 1": {
+        "desc" : "test", 
+        "feat1" : "feature2", 
+        "feat2" : "feature"
+    },
+
+    "Wallet 2": {
+        "desc" : "feature", 
+        "feat1" : "feautre", 
+        "feat2" : "feature"
+    },
+
+    "Wallet 3": {
+        "desc" : "feature", 
+        "feat1" : "feautre", 
+        "feat2" : "feature"
+    }
+}]
