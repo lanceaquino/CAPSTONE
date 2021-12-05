@@ -9,12 +9,12 @@
     },
 
     "G-Cash": {
-        "desc": "...",
-        "main_feat" : "...", 
-        "dev_supp" : "...",
-        "payment_supp" : "...", 
-        "money_trans" : "...", 
-        "online_shop" : "..."
+        "desc": "gcash-desc",
+        "main_feat" : "gcash-feat", 
+        "dev_supp" : "gcash-support", 
+        "payment_supp" : "gcash-payment_support", 
+        "money_trans" : "gcash-money_trans", 
+        "online_shop" : "gcash-online_shop"
     },
 
     "PayMaya": {
