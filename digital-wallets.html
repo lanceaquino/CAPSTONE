@@ -161,14 +161,15 @@
       $(document).ready(function() {
         $.getJSON(jsonLink, function( data ) {
           curr_wallet = data[0][chosen_wallet];
+          console.log(chosen_wallet)
           console.log(curr_wallet);
           // Changing texts
           $("#wallet1-desc").text(curr_wallet['desc']);
-          $('wallet1-comparison-feats').text(curr_wallet['main_feat']);
-          $('wallet1-comparison-device').text(curr_wallet['dev_supp']);
-          $('wallet1-payment-support').text(curr_wallet['payment_supp']);
-          $('wallet1-comparison-transfer').text(curr_wallet['money_trans']);
-          $('wallet1-comparison-online-shopping').text(curr_wallet['online_shop']);
+          $('#wallet1-comparison-feats').text(curr_wallet['main_feat']);
+          $('#wallet1-comparison-device').text(curr_wallet['dev_supp']);
+          $('#wallet1-comparison-payment').text(curr_wallet['payment_supp']);
+          $('#wallet1-comparison-transfer').text(curr_wallet['money_trans']);
+          $('#wallet1-comparison-online-shopping').text(curr_wallet['online_shop']);
         });
       });
     });
@@ -182,11 +183,11 @@
           console.log(curr_wallet);
           // Changing texts
           $("#wallet2-desc").text(curr_wallet['desc']);
-          $('wallet2-comparison-feats').text(curr_wallet['main_feat']);
-          $('wallet2-comparison-device').text(curr_wallet['dev_supp']);
-          $('wallet2-comparison-payment').text(curr_wallet['payment_supp']);
-          $('wallet2-comparison-transfer').text(curr_wallet['money_trans']);
-          $('wallet2-comparison-online-shopping').text(curr_wallet['online_shop']);
+          $('#wallet2-comparison-feats').text(curr_wallet['main_feat']);
+          $('#wallet2-comparison-device').text(curr_wallet['dev_supp']);
+          $('#wallet2-comparison-payment').text(curr_wallet['payment_supp']);
+          $('#wallet2-comparison-transfer').text(curr_wallet['money_trans']);
+          $('#wallet2-comparison-online-shopping').text(curr_wallet['online_shop']);
         });
       });
     });
