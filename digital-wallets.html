@@ -57,9 +57,7 @@
                 look into the different main features and description about these wallets 
                 and know what is best for you!
             </p>
-            <p>
-                This section is still under development. Sorry for the inconvenience.
-            </p>
+
         </div>
 
     </section>
@@ -76,7 +74,7 @@
               <h3>Features</h3>
             </th>
             <th id = 'tab-wallet1' scope="col">
-              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+              <select id = 'select-wallet1' class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                 <option selected>Choose wallet</option>
                 <option value="1">Wallet 1</option>
                 <option value="2">Wallet 2</option>
@@ -84,7 +82,7 @@
               </select>
             </th>
             <th id = 'tab-wallet2' scope="col">
-              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+              <select id = 'select-wallet2' class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                 <option selected>Choose wallet</option>
                 <option value="1">Wallet 1</option>
                 <option value="2">Wallet 2</option>
@@ -95,20 +93,35 @@
         </thead>
         <tbody>
           <tr>
-            <td id ='comparison-desc'>Brief Description</td>
+            <td id ='desc'>Wallet Description</td>
             <!-- Add ID/class for dictionary calls -->
-            <td id = 'wallet1-desc'>row 1 col 1</td>
-            <td id = 'wallet2-desc'>row 1 col 2</td>
+            <td id = 'wallet1-desc'>...</td>
+            <td id = 'wallet2-desc'>...</td>
           </tr>
           <tr>
-            <td id = 'comparison-main-uses'>Main Uses</td>
-            <td id = 'wallet1-comparison-uses'>row 2 col 1</td>
-            <td id = 'wallet2-comparison-uses'>row 2 col 2</td>
+            <td id = 'comparison-main-feats'>Main Features</td>
+            <td id = 'wallet1-comparison-feats'>...</td>
+            <td id = 'wallet2-comparison-feats'>...</td>
           </tr>
           <tr>
             <td id = 'comparison-device-support'> Device Support </td>
-            <td id = 'wallet1-comparison-device'>row 3 col 1</td>
-            <td id = 'wallet2-comparison-device'>row 3 col 2</td>
+            <td id = 'wallet1-comparison-device'>...</td>
+            <td id = 'wallet2-comparison-device'>...</td>
+          </tr>
+          <tr>
+            <td id = 'comparison-payment-support'> Payment Support </td>
+            <td id = 'wallet1-comparison-payment'>...</td>
+            <td id = 'wallet2-comparison-payment'>...</td>
+          </tr>
+          <tr>
+            <td id = 'comparison-money-transfer'> Money Transfers </td>
+            <td id = 'wallet1-comparison-transfer'>...</td>
+            <td id = 'wallet2-comparison-transfer'>...</td>
+          </tr>
+          <tr>
+            <td id = 'comparison-online-shopping'> Online Shopping </td>
+            <td id = 'wallet1-comparison-online-shopping'>...</td>
+            <td id = 'wallet2-comparison-online-shopping'>...</td>
           </tr>
         </tbody>
       </table>
@@ -126,93 +139,56 @@
 
   </footer>
 
+  <!-- JS SCRIPTS  -->
+  <!-- Import JQuery Library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" language="javascript" src="wallet_data.json"></script> 
 
 
   <script>
-    
-    // IMPORTANT NOTE: This data is temporary. We need to find way t
-    // to host JSON file and still in development. But for now, this 
-    // Would be the filler for the digital wallets data. 
-    // mydata = {
-    //   "Choose Wallet":{
-    //     "desc": "...",
-    //     "feat1" : "...", 
-    //     "feat2" : "..."
-    //   },
-      
-    //   "Wallet 1": {
-    //     "desc" : "test", 
-    //     "feat1" : "feature2", 
-    //     "feat2" : "feature"
-    //   },
-
-    //   "Wallet 2": {
-    //     "desc" : "feature", 
-    //     "feat1" : "feautre", 
-    //     "feat2" : "feature"
-    //   },
-
-    //   "Wallet 3": {
-    //     "desc" : "feature", 
-    //     "feat1" : "feautre", 
-    //     "feat2" : "feature"
-    //   }
-    // }; 
-
-    // $("select").on("change", function(event){
-    //   $.getJSON('wallet_data.json', function(wallet) {
-    //     console.log(wallet)
-    //   })
-    // })
+    // Current JSON file is being hosted in my Github repo 
+    var jsonLink = 'https://raw.githubusercontent.com/lanceaquino/CAPSTONE/main/wallet_data.json';
 
     // Initiate wallet variables
     var wallet_1 = "Choose_Wallet";
     var wallet_2 = "Choose Wallet";
 
     // Select Wallets from 'Select'
-    $('select').on('change', function() {
-      var chosen_wallet = $('#tab-wallet1 option:selected').text()
-      console.log(chosen_wallet)
-      wallet_1 = chosen_wallet
+    $('#select-wallet1').on('change', function() {
+      var chosen_wallet = $('#tab-wallet1 option:selected').text();
+
+      $(document).ready(function() {
+        $.getJSON(jsonLink, function( data ) {
+          curr_wallet = data[0][chosen_wallet];
+          console.log(curr_wallet);
+          // Changing texts
+          $("#wallet1-desc").text(curr_wallet['desc']);
+          $('wallet1-comparison-feats').text(curr_wallet['main_feat']);
+          $('wallet1-comparison-device').text(curr_wallet['dev_supp']);
+          $('wallet1-payment-support').text(curr_wallet['payment_supp']);
+          $('wallet1-comparison-transfer').text(curr_wallet['money_trans']);
+          $('wallet1-comparison-online-shopping').text(curr_wallet['online_shop']);
+        });
+      });
     });
 
-    $('select').on('change', function() {
-      var chosen_wallet = $('#tab-wallet2 option:selected').text()
-      console.log(chosen_wallet)
-      wallet_2 = chosen_wallet
+    $('#select-wallet2').on('change', function() {
+      var chosen_wallet = $('#tab-wallet2 option:selected').text();
+
+      $(document).ready(function() {
+        $.getJSON(jsonLink, function( data ) {
+          curr_wallet = data[0][chosen_wallet];
+          console.log(curr_wallet);
+          // Changing texts
+          $("#wallet2-desc").text(curr_wallet['desc']);
+          $('wallet2-comparison-feats').text(curr_wallet['main_feat']);
+          $('wallet2-comparison-device').text(curr_wallet['dev_supp']);
+          $('wallet2-comparison-payment').text(curr_wallet['payment_supp']);
+          $('wallet2-comparison-transfer').text(curr_wallet['money_trans']);
+          $('wallet2-comparison-online-shopping').text(curr_wallet['online_shop']);
+        });
+      });
     });
 
-    console.log(wallet_1);
-    console.log(wallet_2);
-
-    // Call JSON using wallet vals 
-    $(document).ready(function(e) {
-         console.log(jsonObject.wallet_1);
-    });
-
-
-
-    // $(document).ready(function(){
-    //     $.getJSON("wallet_data.json", function(data){
-    //         // console.log(data.name); // Prints: Harry
-    //         // console.log(data.age); // Prints: 14
-    //     }).fail(function(){
-    //         console.log("An error has occurred.");
-    //     });
-    // });
-
-
-
-    // $('#wallet-table').on('change', function() {
-    //   $.getJSON("wallet_data.json", function(result){
-    //     $.each(result, function(i, field){
-    //       $("#wallet1-desc").text("test")
-    //     })
-    //   })
-    //   // alert( this.value );
-    // });
   </script>
 
 </body>

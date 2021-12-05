@@ -1,25 +1,47 @@
 [{
     "Choose wallet":{
         "desc": "...",
-        "feat1" : "...", 
-        "feat2" : "..."
+        "main_feat" : "...", 
+        "dev_supp" : "...",
+        "payment_supp" : "...", 
+        "money_trans" : "...", 
+        "online_shop" : "..."
     },
 
-    "Wallet 1": {
-        "desc" : "test", 
-        "feat1" : "feature2", 
-        "feat2" : "feature"
+    "G-Cash": {
+        "desc": "...",
+        "main_feat" : "...", 
+        "dev_supp" : "...",
+        "payment_supp" : "...", 
+        "money_trans" : "...", 
+        "online_shop" : "..."
     },
 
-    "Wallet 2": {
-        "desc" : "feature", 
-        "feat1" : "feautre", 
-        "feat2" : "feature"
+    "PayMaya": {
+        "desc": "...",
+        "main_feat" : "...", 
+        "dev_supp" : "...",
+        "payment_supp" : "...", 
+        "money_trans" : "...", 
+        "online_shop" : "..."
     },
 
-    "Wallet 3": {
-        "desc" : "feature", 
-        "feat1" : "feautre", 
-        "feat2" : "feature"
+    "Sample Wallet 3": {
+        "desc": "test",
+        "main_feat" : "test", 
+        "dev_supp" : "test",
+        "payment_supp" : "test", 
+        "money_trans" : "test", 
+        "online_shop" : "test"
+    }, 
+    
+    "Sample Wallet 4": {
+        "desc": "test",
+        "main_feat" : "test", 
+        "dev_supp" : "test",
+        "payment_supp" : "test", 
+        "money_trans" : "test", 
+        "online_shop" : "test"
     }
+    
 }]
