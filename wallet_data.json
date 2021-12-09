@@ -9,39 +9,39 @@
     },
 
     "G-Cash": {
-        "desc": "gcash-desc",
-        "main_feat" : "gcash-feat", 
-        "dev_supp" : "gcash-support", 
-        "payment_supp" : "gcash-payment_support", 
-        "money_trans" : "gcash-money_trans", 
-        "online_shop" : "gcash-online_shop"
+        "desc": "Digital wallet based on Globe Telecomm. Offers multiple services in lifestyle and finance.",
+        "main_feat" : "Bank Transfers, Bill Payments, Personal Loans, Digital Payments, Investments and Savings", 
+        "dev_supp" : "Apple and Android", 
+        "payment_supp" : "QR codes and direct transfers to other Gcash accounts and stored", 
+        "money_trans" : "YES", 
+        "online_shop" : "YES"
     },
 
     "PayMaya": {
-        "desc": "...",
-        "main_feat" : "...", 
-        "dev_supp" : "...",
-        "payment_supp" : "...", 
-        "money_trans" : "...", 
-        "online_shop" : "..."
+        "desc": "Digital Finance company that is famously known for its issuance of Virtual Cards.",
+        "main_feat" : "Owning a Virtual Card supported by VISA or mastercard, Digital payments, online shopping and flight booking", 
+        "dev_supp" : "Apple and Android",
+        "payment_supp" : "Virtual Card", 
+        "money_trans" : "YES", 
+        "online_shop" : "YES"
     },
 
-    "Sample Wallet 3": {
-        "desc": "test",
-        "main_feat" : "test", 
-        "dev_supp" : "test",
-        "payment_supp" : "test", 
-        "money_trans" : "test", 
-        "online_shop" : "test"
+    "Coins PH": {
+        "desc": "Digital wallet plaform for investing in stocks and cryptocurrency",
+        "main_feat" : "Crypto and Stock investments, online purchases", 
+        "dev_supp" : "Android and Apple",
+        "payment_supp" : "Digital Transfers to fellow Coins.PH accounts. Bills are payed inside the application. ", 
+        "money_trans" : "YES", 
+        "online_shop" : "YES"
     }, 
     
-    "Sample Wallet 4": {
-        "desc": "test",
-        "main_feat" : "test", 
-        "dev_supp" : "test",
-        "payment_supp" : "test", 
-        "money_trans" : "test", 
-        "online_shop" : "test"
+    "GrabPay": {
+        "desc": "Digital Wallet based on the ride-hailing app Grab. Incorporates Grab services such as ride-hailing and food delivery.",
+        "main_feat" : "Ride-hailing transactions and food delivery. Fund Transfers.", 
+        "dev_supp" : "Android and Apple",
+        "payment_supp" : "QR Codes and fellow GrabPay users and stores", 
+        "money_trans" : "YES", 
+        "online_shop" : "YES"
     }
     
 }]
