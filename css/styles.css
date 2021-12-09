@@ -127,6 +127,11 @@ h3 {
     text-align: center;
 }
 
+td {
+    margin: 10px;
+    vertical-align: middle;
+}
+
 /* --------------- CONTACT US PAGE ---------------*/
 
 /* #contact-us-title{
