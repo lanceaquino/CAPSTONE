@@ -96,12 +96,45 @@ h3 {
 }
 
 /* --------------- ARTICLES PAGE ---------------*/
+
+.img-container{
+    position:relative;
+    display:inline-block;
+}
+.img-container .overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:90%;
+    background:#226699;
+    opacity:0;
+    transition:opacity 250ms ease-in-out;
+}
+.img-container:hover .overlay{
+    opacity:0.8;
+}
+
+.overlay span{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#fff;
+    font-size: 25px;
+}
+
+.article-link{
+    color: black;
+    text-decoration: none;
+}
+
 #articles-container {
     padding-top: 100px;
     padding-bottom: 50px;
 }
 
-#articles-header {
+#article-header {
     padding-bottom: 50px;
 }
 
@@ -111,14 +144,22 @@ h3 {
     width: 75%;
 }
 
-#article-contents {
+#article-section-padding {
     padding-top: 20px;
 }
 
 #article-image {
-    width: 100%;
+    width: 350px;
+    height: 250px;
     margin: auto auto auto auto;
     padding-bottom: 30px;
+    object-fit: cover;
+}
+
+/* --------------- SINGLE ARTICLE PAGE  ---------------*/
+
+#article-content {
+    padding-top: 100px;
 }
 
 /* --------------- DIGITAL WALLETS PAGE ---------------*/
