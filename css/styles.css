@@ -70,7 +70,7 @@ h3 {
 
 #home-features-compare-picture {
     margin-top: 35px;
-    width : 25%;
+    width: 25%;
     margin-bottom: 35px;
 }
 
@@ -151,7 +151,8 @@ h3 {
 #article-image {
     width: 350px;
     height: 250px;
-    margin: auto auto auto auto;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 30px;
     object-fit: cover;
 }
@@ -159,7 +160,22 @@ h3 {
 /* --------------- SINGLE ARTICLE PAGE  ---------------*/
 
 #article-content {
-    padding-top: 100px;
+    padding: 150px 250px 150px 250px;
+}
+
+#article-page-image {
+    width: 450px;
+    height: 350px;
+    margin-top: 25px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+}
+
+#article-text {
+    font-size: 20px;
+    line-height: 30px;
 }
 
 /* --------------- DIGITAL WALLETS PAGE ---------------*/
