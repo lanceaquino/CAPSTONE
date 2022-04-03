@@ -55,6 +55,11 @@ h3 {
     text-align: right;
 }
 
+#translation {
+    margin-top: 50px; 
+    color: gray;
+    align-items:left;
+}
 
 /* FEATURES */
 #features{
