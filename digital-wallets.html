@@ -9,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <!-- According Juraj, this is very bad practice and please move script at the bottom. He whispers it significantly reduces performance. -->
     
   </head>
     
@@ -63,7 +62,11 @@
     </section>
 
 <!-- DIGITAL WALLET COMPARISON -->
-<!-- Make a layout  -->
+<!-- 
+  This is the interactive section of the website. 
+  
+  - The comparison comes in two sections/columns. 
+-->
 
     <section class = 'container'>
   
@@ -96,7 +99,6 @@
         <tbody>
           <tr>
             <td id ='desc'>Wallet Description</td>
-            <!-- Add ID/class for dictionary calls -->
             <td id = 'wallet1-desc'>...</td>
             <td id = 'wallet2-desc'>...</td>
           </tr>
@@ -143,6 +145,17 @@
 
   <!-- JS SCRIPTS  -->
   <!-- Import JQuery Library -->
+  <!-- 
+    We need to use JQuery for two reasons: 
+    
+      1. It allows us to have a temporary databse for wallet information 
+      data in a .json file which we can use to query our entries for the table
+      cells. 
+
+      2. Without JQuery, it would be difficult to implement in HTML where I might 
+      need to create a single page for every wallet. 
+
+   -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
@@ -158,6 +171,8 @@
     $('#select-wallet1').on('change', function() {
       var chosen_wallet = $('#tab-wallet1 option:selected').text();
 
+      // We create a function that calls on the .json file 
+      // and change the text inside the table cells for each column. 
       $(document).ready(function() {
         $.getJSON(jsonLink, function( data ) {
           curr_wallet = data[0][chosen_wallet];

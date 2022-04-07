@@ -1,3 +1,9 @@
+/* 
+This stylesheet goes through all the pages and are divided per section to 
+properly navigate which id, class or type of HTML tag would be styled for
+this CSS. 
+*/
+
 /* --------------- GLOBAL ---------------*/
 
 body {
@@ -207,6 +213,7 @@ h3 {
 td {
     margin: 10px;
     vertical-align: middle;
+    width: 250px;
 }
 
 /* --------------- CONTACT US PAGE ---------------*/

@@ -9,7 +9,7 @@
     },
 
     "G-Cash": {
-        "desc": "Digital wallet based on Globe Telecomm. <br> Offers multiple services in lifestyle and finance.",
+        "desc": "Digital wallet based on Globe Telecomm. Offers multiple services in lifestyle and finance.",
         "main_feat" : "Bank Transfers, Bill Payments, Personal Loans, Digital Payments, Investments and Savings", 
         "dev_supp" : "Apple and Android", 
         "payment_supp" : "QR codes and direct transfers to other Gcash accounts and stored", 
